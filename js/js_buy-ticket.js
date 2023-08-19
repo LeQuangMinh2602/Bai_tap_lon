@@ -10,6 +10,15 @@ $(document).ready(() => {
         }
     })
 
+    $("#menubtn").on("click", function() {
+      $(".menu").addClass("active");
+      $("#menubtn").addClass("hidden");
+  })
+  $("#cancelbtn").on("click", function() {
+      $(".menu").removeClass("active");
+      $("#menubtn").removeClass("hidden")
+  })
+
     $(function() {
         var divticket = $(".ticket");
         var widthticket = divticket.width();
@@ -51,7 +60,7 @@ $(document).ready(() => {
               <tr>
                 <td colspan="2">
                   <p class="price">${element.price}</p>
-                 <button title="alert on screen" class="btn book">Đặt vé<button>
+                  <button title="alert on screen" class="btn book">Đặt vé</button>
                 </td>
               </tr>
             </table>
@@ -101,10 +110,9 @@ $(document).ready(() => {
       })
     })
   });
-  let bookList = document.querySelectorAll(".book");
-    bookList.forEach(book => {
-      book.addEventListener("click", () => {
-          alert("Đặt vé thành công!")
-      })
-  })
+  
+  $(".tickets").on('click', "button", function() {
+    alert("Đặt vé thành công!");
+  });
+   
 });

@@ -1,7 +1,6 @@
 $(document).ready(() =>{
     const forms = document.querySelector(".forms"),
     links = document.querySelectorAll(".link");
-    
     links.forEach(link => {
         link.addEventListener("click", e => {
             e.preventDefault();

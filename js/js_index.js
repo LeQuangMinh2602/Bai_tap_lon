@@ -19,4 +19,13 @@ $(document).ready(() => {
             $("header").removeClass("sticky")
         }
     })
+
+    $("#menubtn").on("click", function() {
+        $(".menu").addClass("active");
+        $("#menubtn").addClass("hidden");
+    })
+    $("#cancelbtn").on("click", function() {
+        $(".menu").removeClass("active");
+        $("#menubtn").removeClass("hidden")
+    })
 });
